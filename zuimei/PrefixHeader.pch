@@ -1,0 +1,57 @@
+//
+//  PrefixHeader.pch
+//  zuimei
+//
+//  Created by Aries on 15/10/30.
+//  Copyright © 2015年 youke. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "NSString+SizeOfString.h"
+//获取屏幕宽度
+#define KScreenWidth  [UIScreen mainScreen].bounds.size.width
+//获取屏幕高度
+#define KScreenHeight [UIScreen mainScreen].bounds.size.height
+//获取导航栏高度
+#define NavigationBarHeight self.navigationController.navigationBar.frame.size.height
+//获取状态栏高度
+#define StatusBarHeight  [[UIApplication sharedApplication] statusBarFrame].size.height
+//  设置颜色
+#define RGBCOLOR(a,b,c,d)    [UIColor colorWithRed:a/255.0 green:b/255.0 blue:c/255.0 alpha:d]
+//是否为iphone4
+#define IS_IPHONE_4 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )480 ) < DBL_EPSILON )
+
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
+//接口
+
+#define HomeURL @"http://yyjd.xinzhuzhang.com/m/rihankong/subject/list?type=0&appid=891563670&channel=AppleStore&token=&udid=96bb2fcb54544faa6c9e2a2b3fe36408fc4a0140&idfa=455EE302-DAB0-480E-9718-C2443E900132&idfv=36BC0D61-662E-4CB8-B1E1-898DACAA80AE&mac=02:00:00:00:00:00&timestamp=1429289239.691722&v=1.0.9&ios=8.1&sign=5ae83993cf5947d48e160dd43e7e1f77" //首页
+
+
+#define GUANZHUURL @"http://yyjd.xinzhuzhang.com/m/rihankong/shop/follow/list?appid=891563670&channel=AppleStore&token=&udid=96bb2fcb54544faa6c9e2a2b3fe36408fc4a0140&idfa=455EE302-DAB0-480E-9718-C2443E900132&idfv=36BC0D61-662E-4CB8-B1E1-898DACAA80AE&mac=02:00:00:00:00:00&timestamp=1429290382.930141&v=1.0.9&ios=8.1&sign=7f06968b1b3b40abba0e20f80694b0d5" //关注页面
+
+#define FENLEIURL @"http://yyjd.xinzhuzhang.com/m/rihankong/goods/category/list?appid=891563670&channel=AppleStore&token=&udid=96bb2fcb54544faa6c9e2a2b3fe36408fc4a0140&idfa=455EE302-DAB0-480E-9718-C2443E900132&idfv=36BC0D61-662E-4CB8-B1E1-898DACAA80AE&mac=02:00:00:00:00:00&timestamp=1429291183.807268&v=1.0.9&ios=8.1&sign=39fac4ff509a23f421d4e34203038712" //分类页面
+
+#define JINGXUANURL @"http://yyjd.xinzhuzhang.com/m/rihankong/subject/detail?id=29&page=0&appid=891563670&channel=AppleStore&token=&udid=96bb2fcb54544faa6c9e2a2b3fe36408fc4a0140&idfa=455EE302-DAB0-480E-9718-C2443E900132&idfv=36BC0D61-662E-4CB8-B1E1-898DACAA80AE&mac=02:00:00:00:00:00&timestamp=1429290291.817267&v=1.0.9&ios=8.1&sign=66b11e8e60830c23ef0e1f6054f7fde1&page=10%E5%B0%8F%E7%BC%96%E7%B2%BE%E9%80%89" //小编精选
+
+#define TESTURL @"http://yyjd.xinzhuzhang.com/m/rihankong/goods/category/search?cid=15&isFollow=&page=ld&appid=891563670&channel=AppleStore&token=&udid=96bb2fcb54544faa6c9e2a2b3fe36408fc4a0140&idfa=455EE302-DAB0-480E-9718-C2443E900132&idfv=36BC0D61-662E-4CB8-B1E1-898DACAA80AE&mac=02:00:00:00:00:00&timestamp=1429786584.315401&v=1.0.9&ios=8.1&sign=c4183d86ffcdbb35dc95293fcb84b4b6" //其他种类测试
+
+#import "UIViewExt.h"
+#import "AFNetworking.h"
+#import "CYLTabBarController.h"
+#import "CYLHomeViewController.h"
+//#import "CYLMessageViewController.h"
+#import "CYLPlusButtonSubclass.h"
+#import "CYLMineViewController.h"
+#import "CYLSameFityViewController.h"
+#import "MBProgressHUD.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "ClassViewController.h"
+//#import "AFHTTPRequestOperationManager.h"
+
+#endif /* PrefixHeader_pch */
